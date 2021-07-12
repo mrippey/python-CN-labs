@@ -10,3 +10,7 @@
 
 wrong = False
 right = True
+
+find_an_answer = not wrong and right or wrong 
+
+print(find_an_answer)
