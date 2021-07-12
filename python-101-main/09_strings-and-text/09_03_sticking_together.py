@@ -12,3 +12,9 @@ gum = "gum"
 shoe = "shoe"
 song = "spice girls: wannabe"
 body_part = "your ear"
+
+print(glue+fingers)
+
+print(pb+teeth)
+
+print(gum+shoe)

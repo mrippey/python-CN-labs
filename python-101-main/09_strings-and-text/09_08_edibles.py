@@ -6,3 +6,12 @@
 # What dish can you make from these ingredients? :)
 
 s = "They grappled with their leggins before going to see the buttercups flourish."
+
+egg = s[26:29]
+print(egg) 
+
+butter = s[56:63]
+print(butter)
+
+flour = s[67:73]
+print(flour)
