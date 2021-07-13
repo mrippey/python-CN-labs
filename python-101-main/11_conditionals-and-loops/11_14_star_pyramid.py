@@ -22,3 +22,13 @@
 # * * *
 #
 # HINT: Think of nested for loops!
+
+
+def star_pyaramid(stars):
+    for i in range(stars):
+        for _ in range(i + 1):
+            print("* ", end="")
+
+        print("\r")
+
+star_pyaramid(5)

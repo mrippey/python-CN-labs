@@ -30,7 +30,7 @@
 # You are always facing North and you can take sideways steps
 # without changing the direction that you're looking.
 
-flag = True
+flag = False
 
 if flag == True:
     print("left")

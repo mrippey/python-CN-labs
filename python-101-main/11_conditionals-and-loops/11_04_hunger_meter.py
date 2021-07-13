@@ -7,8 +7,8 @@
 
 hunger = 2
 
-if hunger == "big":
-    print("Eat the pizza")
+if hunger != str:
+    print("We only accept strings round these parts")
 elif hunger == "small":
     print("Eat the apple")
 else:

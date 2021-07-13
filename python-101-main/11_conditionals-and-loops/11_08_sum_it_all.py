@@ -6,3 +6,6 @@
 
 start = 1
 stop = 100
+
+total = sum(range(start, stop+1))
+print(f'The sum is: {total}')

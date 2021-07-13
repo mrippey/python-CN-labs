@@ -3,3 +3,10 @@
 
 secret = "2349h30023388281e3299371l1l3094842o0333322883"
 solution = ""
+
+
+for x in secret:
+    if x.isalpha():
+        solution = "".join([solution, x])
+
+print(f'Solution: {solution}')

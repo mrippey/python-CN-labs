@@ -7,3 +7,9 @@
 # for example flags and conditional statements.
 
 filename = "operators.pdf"
+
+
+ext = filename[-4:]
+for x in filename:
+    if x == ext:
+        print(True)
