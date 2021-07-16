@@ -3,3 +3,11 @@
 # - takes an arbitrary amount of toppings
 # - returns a string representing a sandwich with the bread on top
 #   and bottom, and the toppings in between.
+
+def make_sandwich(bread, *arg):
+
+    return f"""         {bread}
+        {arg}
+        {bread}"""
+
+print(make_sandwich('pita', 'cheez', 'tacos', 'lettuce'))
