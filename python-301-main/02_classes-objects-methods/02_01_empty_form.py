@@ -10,3 +10,38 @@
 #
 # Model such an application form as a Python class below, and instantiate
 # a few objects from it.
+
+import random
+class PatientForm():
+
+    def __init__(self, name, age, email, birth_date, phone_number, insurer):
+        self.name = name
+        self.age = age
+        self.email = email
+        self.birth_date = birth_date
+        self.phone_number = phone_number
+        self.insurer = insurer
+        self.patient_id = random.randint(1, 1000)
+
+    def empty_field(self):
+        print(f"""Please fill out the below fields: 
+        Name: 
+        Age: 
+        Email: 
+        Birthdate: 
+        Phone Number: 
+        Insurer Name: """)
+        print()
+
+    def completed_field(self):
+        print(f"""Thank you {self.name.title()}, our records show: 
+        ID: {self.patient_id}
+        Age: {self.age}
+        Email: {self.email}
+        Birthdate: {self.birth_date}
+        Phone Number: {self.phone_number}
+        Insurer: {self.insurer}
+        
+        If there are no issues, your information will be saved in our records.""")
+
+p1 = PatientForm()
