@@ -2,7 +2,7 @@
 import csv
 
 
-with open("filecounts.csv", "r") as csvfile:
+with open("/Users/user_name/Documents/CodingNomads/labs/python-201-main/03_file-input-output/file-counter/filecounts.csv", "r") as csvfile:
     reader = csv.DictReader(csvfile, fieldnames=["Folder", "CSV", "MD", "PNG"])
     counts = list(reader)
 
