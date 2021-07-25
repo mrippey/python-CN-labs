@@ -10,3 +10,11 @@
 # Keep in mind that you will run into an error when you'll attempt to import
 # this file, because Python modules can't begin with a number.
 # You can rename the file to make it work :)
+
+def func_with_input_params(name: str, age: int):
+    
+    greeting = f'Hello {name}, age {age}.'
+    
+    return greeting
+
+print(func_with_input_params('Michael', 22))
