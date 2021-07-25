@@ -10,11 +10,22 @@
 # Keep in mind that you will run into an error when you'll attempt to import
 # this file, because Python modules can't begin with a number.
 # You can rename the file to make it work :)
+import requests
+import pathlib 
 
-def func_with_input_params(name: str, age: int):
-    
-    greeting = f'Hello {name}, age {age}.'
-    
-    return greeting
 
-print(func_with_input_params('Michael', 22))
+def connect_to_site(site):
+    try:
+        response = requests.get(site)
+    
+        
+        return response.status_code
+
+    except requests.ConnectionError:
+        return 'Check the URL'
+        
+print(connect_to_site('https://127.0.0.1'))
+
+
+    
+  
