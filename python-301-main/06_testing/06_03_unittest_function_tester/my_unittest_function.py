@@ -24,7 +24,7 @@ def connect_to_site(site):
     except requests.ConnectionError:
         return 'Check the URL'
         
-print(connect_to_site('https://127.0.0.1'))
+print(connect_to_site('https://python.org'))
 
 
     
