@@ -3,7 +3,11 @@
 # Make the necessary edits in `codingnomads/cook.py` to avoid that extra
 # print statement. You can't remove any code in `cook.py`,
 # but you can add code.
-
+'''
 from codingnomads.cook import soup
 
 print(f"I like {soup}.")
+'''
+
+
+letters = [letter.lower() for letter in 'CodingNomads']

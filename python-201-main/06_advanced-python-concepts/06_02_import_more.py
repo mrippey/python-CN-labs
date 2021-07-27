@@ -3,7 +3,8 @@
 # All the necessary variables and functions are
 # already defined in the `codingnomads/` folder.
 
-
+import codingnomads as i 
+import codingnomads.recipes as s
 
 
 digestible = i.prepare(i.potato)
