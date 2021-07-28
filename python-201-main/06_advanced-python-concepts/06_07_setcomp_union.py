@@ -10,3 +10,9 @@
 
 s = {1, 2, 3, 4}
 t = {2, 3, 4, 5, 7}
+
+u = s | t 
+
+result = {x**2 for x in u if x > 2} 
+
+print(result)
