@@ -4,3 +4,15 @@
 #    "I bumped my toe! Shoot!"
 # Would, after decorating it with `@censor()`, return:
 #    "I bumped my toe! S****!"
+
+
+def censorship(func):
+    def wrapper():
+        print(func().replace('Shoot', 'S****'))
+    return wrapper 
+
+@censorship
+def wash_your_mouth_out():
+    return 'I bumped my toe! Shoot!'
+
+wash_your_mouth_out()
