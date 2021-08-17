@@ -15,14 +15,15 @@ connection = engine.connect()
 
 metadata = sqlalchemy.MetaData()
 
-actor = sqlalchemy.Table('actor', metadata, autoload=True, autoload_with=engine)
+
+category = sqlalchemy.Table('category', metadata, autoload=True, autoload_with=engine)
 film = sqlalchemy.Table('film', metadata, autoload=True, autoload_with=engine)
+film_category = sqlalchemy.Table('film_category', metadata, autoload=True, autoload_with=engine)
 
-film_actor = sqlalchemy.Table('film_actor', metadata, autoload=True, autoload_with=engine)
+join_statement = category.join(film_category, film_category.columns.category_id == category.columns.category_id).join(film, film.columns.film_id == film_category.columns.film_id)
 
-join_statement = actor.join(film_actor, film_actor.columns.actor_id == actor.columns.actor_id).join(film, film.columns.film_id == film_actor.columns.film_id)
+query_tables = sqlalchemy.select([film.columns.film_id, film.columns.title,category.columns.name, category.columns.category_id, category.columns.last_update]).select_from(join_statement)
 
-query_tables = sqlalchemy.select([film.columns.film_id, film.columns.title,actor.columns.first_name, actor.columns.last_name]).select_from(join_statement)
 
 result = connection.execute(query_tables)
 
