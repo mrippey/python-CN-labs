@@ -1,11 +1,20 @@
-'''
+
 Consider each of the tasks below as a separate database query. Using SQLAlchemy, which is the necessary code to:
 
 - Select all the actors with the first name of your choice
 
+query = sqlalchemy.select([actor]).where(actor.columns.first_name == actor_choice) OR 
+
+query = sqlalchemy.select([actor]).where(actor.columns.first_name.in_([actor_choice]))
+
+
 - Select all the actors and the films they have been in
 
+query_tables = sqlalchemy.select([film.columns.film_id, film.columns.title,actor.columns.first_name, actor.columns.last_name]).select_from(join_statement)
+
+
 - Select all the actors that have appeared in a category of a comedy of your choice
+
 
 - Select all the comedic films and sort them by rental rate
 
@@ -13,4 +22,4 @@ Consider each of the tasks below as a separate database query. Using SQLAlchemy,
 
 - Using one of the statements above, add a ORDER BY statement of your choice
 
-'''
+
